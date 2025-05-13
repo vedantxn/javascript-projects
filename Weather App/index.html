@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <div class="time-indicator">
+                <span id="current-time">12:30 PM</span>
+                <span id="current-date">Monday, June 10</span>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="city-search" placeholder="Enter city name...">
+                <button id="search-button">Search</button>
+            </div>
+            
+            <div class="weather-info">
+                <div class="location">
+                    <h1 id="location-name">New York</h1>
+                </div>
+                
+                <div class="weather-display">
+                    <div class="temperature">
+                        <h2 id="temperature">24°C</h2>
+                    </div>
+                    <div class="weather-icon">
+                        <div id="weather-animation" class="sunny"></div>
+                    </div>
+                </div>
+                
+                <div class="weather-description">
+                    <p id="weather-condition">Sunny</p>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value">65%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind</span>
+                    <span id="wind-speed" class="detail-value">5 km/h</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feels-like" class="detail-value">26°C</span>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <h3>Forecast</h3>
+                <div class="forecast-container">
+                    <div class="forecast-item">
+                        <span class="forecast-day">Tue</span>
+                        <div class="forecast-icon sunny-small"></div>
+                        <span class="forecast-temp">26°C</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Wed</span>
+                        <div class="forecast-icon cloudy-small"></div>
+                        <span class="forecast-temp">23°C</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Thu</span>
+                        <div class="forecast-icon rainy-small"></div>
+                        <span class="forecast-temp">19°C</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-day">Fri</span>
+                        <div class="forecast-icon partly-cloudy-small"></div>
+                        <span class="forecast-temp">22°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
