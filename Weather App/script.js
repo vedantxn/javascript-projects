@@ -258,20 +258,23 @@ function updateWeatherIcon(weatherId) {
  * @returns {string} - CSS class name for the weather icon
  */
 function getWeatherIconClass(weatherId) {
+    const hour = new Date().getHours();
+    const isNight = hour < 6 || hour >= 20;
+
     // Weather condition codes: https://openweathermap.org/weather-conditions
     if (weatherId >= 200 && weatherId < 300) {
-        return 'rainy'; // Thunderstorm
+        return 'thunderstorm'; // Thunderstorm
     } else if (weatherId >= 300 && weatherId < 600) {
         return 'rainy'; // Drizzle and Rain
     } else if (weatherId >= 600 && weatherId < 700) {
-        return 'cloudy'; // Snow
+        return 'snow'; // Snow
     } else if (weatherId >= 700 && weatherId < 800) {
         return 'cloudy'; // Atmosphere (fog, mist, etc.)
     } else if (weatherId === 800) {
-        return 'sunny'; // Clear sky
+        return isNight ? 'night-clear' : 'sunny'; // Clear sky
     } else if (weatherId > 800) {
         return 'partly-cloudy'; // Clouds
     }
     
-    return 'sunny'; // Default
+    return isNight ? 'night-clear' : 'sunny'; // Default
 }
